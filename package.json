@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/telvinzhong/telvinzhong-webdev-sp21-02-tezhong-server-nodejs/issues"
   },
-  "homepage": "https://github.com/telvinzhong/telvinzhong-webdev-sp21-02-tezhong-server-nodejs#readme"
+  "homepage": "https://github.com/telvinzhong/telvinzhong-webdev-sp21-02-tezhong-server-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

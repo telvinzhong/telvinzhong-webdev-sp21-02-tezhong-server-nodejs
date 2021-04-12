@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 
-const demo = require('./controllers/demos-controller')
-demo(app)
+//const demo = require('./controllers/demos-controller')
+//demo(app)
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
