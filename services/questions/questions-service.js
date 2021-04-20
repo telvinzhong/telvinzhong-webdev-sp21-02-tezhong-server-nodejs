@@ -4,8 +4,6 @@ const questionsDao = require('../../daos/questions-dao')
 const questionsModel = require("../../models/questions/questions-model")
 
 const findAllQuestions = () => {
-    // return questions;
-    // return questionsModel.find()
     return questionsDao.findAllQuestions()
 }
 
@@ -17,8 +15,8 @@ const findQuestionById = (qid) => {
     return questionsDao.findQuestionsById(qid)
 }
 
-
 const createQuestion = () => {
+
 }
 const updateQuestion = () => {}
 
