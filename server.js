@@ -28,3 +28,5 @@ require('./controllers/quiz-attempts-controller')(app)
 
 app.listen(process.env.PORT);
 app.listen(4000)
+
+"mongodb+srv://telvin:glhMwHZZKoJ7f5Dy@cluster0.ofaqd.mongodb.net/whiteboard-02?retryWrites=true&w=majority"
