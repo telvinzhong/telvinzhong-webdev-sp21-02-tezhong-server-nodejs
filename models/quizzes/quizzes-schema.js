@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 const quizzesSchema = mongoose.Schema({
-    _id: String,
+//    _id: String,
     title: String,
     questions:[{
         type: String,

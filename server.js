@@ -9,8 +9,8 @@ app.use(bodyParser.json())
 
 const mongoose = require('mongoose')
 mongoose.connect(
-     'mongodb://localhost:27017/whiteboard-02',
-//    uri,
+//     'mongodb://localhost:27017/whiteboard-02',
+    uri,
     {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(function (req, res, next) {
