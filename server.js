@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const uri = process.env.MONGODB_URI
+//const uri = process.env.MONGODB_URI
 
 let bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -9,8 +9,8 @@ app.use(bodyParser.json())
 
 const mongoose = require('mongoose')
 mongoose.connect(
-//     'mongodb://localhost:27017/whiteboard-02',
-    uri,
+     'mongodb://localhost:27017/whiteboard-02',
+//    uri,
     {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(function (req, res, next) {
@@ -29,4 +29,4 @@ require('./controllers/quiz-attempts-controller')(app)
 app.listen(process.env.PORT);
 app.listen(4000)
 
-"mongodb+srv://telvin:glhMwHZZKoJ7f5Dy@cluster0.ofaqd.mongodb.net/whiteboard-02?retryWrites=true&w=majority"
+//"mongodb+srv://telvin:glhMwHZZKoJ7f5Dy@cluster0.ofaqd.mongodb.net/whiteboard-02?retryWrites=true&w=majority"
