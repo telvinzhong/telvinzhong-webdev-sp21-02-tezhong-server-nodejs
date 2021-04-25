@@ -1,16 +1,20 @@
 const express = require('express')
 const app = express()
+require('dotenv').config({ path: 'process.env.MONGODB_URI' });
 
-//const uri = process.env.MONGODB_URI
-
+const uri = process.env.MONGODB_URI
+require('dotenv').config()
+//console.log(process.env.MONGODB_URI)
 let bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
+const MongoClient = require('mongodb').MongoClient;
+//const uri = "mongodb+srv://telvin:glhMwHZZKoJ7f5Dy@cluster0.ofaqd.mongodb.net/whiteboard-02?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const mongoose = require('mongoose')
 mongoose.connect(
-     'mongodb://localhost:27017/whiteboard-02',
-//    uri,
+//     'mongodb://localhost:27017/whiteboard-02',
+    uri,
     {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(function (req, res, next) {
