@@ -4,12 +4,10 @@ require('dotenv').config({ path: 'process.env.MONGODB_URI' });
 
 const uri = process.env.MONGODB_URI
 require('dotenv').config()
-//console.log(process.env.MONGODB_URI)
 let bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 const MongoClient = require('mongodb').MongoClient;
-//const uri = "mongodb+srv://telvin:glhMwHZZKoJ7f5Dy@cluster0.ofaqd.mongodb.net/whiteboard-02?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const mongoose = require('mongoose')
 mongoose.connect(
@@ -32,5 +30,3 @@ require('./controllers/quiz-attempts-controller')(app)
 
 app.listen(process.env.PORT);
 app.listen(4000)
-
-//"mongodb+srv://telvin:glhMwHZZKoJ7f5Dy@cluster0.ofaqd.mongodb.net/whiteboard-02?retryWrites=true&w=majority"
